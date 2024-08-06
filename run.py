@@ -58,25 +58,38 @@ def main():
     Main function to run the Roll dice game. Initializes scores, manages player turns,
     and determines the winner when a player reaches the winning score.
     """
-    display_rules()  # Display the rules before starting the game
+    # Loop to allow replaying the game
+    while True:
+        display_rules()  # Display the rules before starting the game
+        winning_score = 50
+        player_scores = {1: 0, 2: 0}  # Dictionary to track scores for both players
+        current_player = 1  # Player 1 starts first
 
-    winning_score = 100
-    player_scores = {1: 0, 2: 0}  # Dictionary to track scores for both players
-    current_player = 1  # Player 1 starts first
+        while player_scores[1] < winning_score and player_scores[2] < winning_score:
+            print(f"\nPlayer {current_player}'s turn:")
+            turn_total = player_turn(current_player)
+            player_scores[current_player] += turn_total
+            print(f"Player {current_player}'s total score is now {player_scores[current_player]}")
+            
+            # Check if the current player has reached the winning score
+            if player_scores[current_player] >= winning_score:
+                print(f"\nPlayer {current_player} wins with a score of {player_scores[current_player]}!")
+                break
+            
+            # Switch to the other player
+            current_player = 2 if current_player == 1 else 1
 
-    while player_scores[1] < winning_score and player_scores[2] < winning_score:
-        print(f"\nPlayer {current_player}'s turn:")
-        turn_total = player_turn(current_player)
-        player_scores[current_player] += turn_total
-        print(f"Player {current_player}'s total score is now {player_scores[current_player]}")
-        
-        # Check if the current player has reached the winning score
-        if player_scores[current_player] >= winning_score:
-            print(f"\nPlayer {current_player} wins with a score of {player_scores[current_player]}!")
-            break
-        
-        # Switch to the other player
-        current_player = 2 if current_player == 1 else 1
+        # Ask if players want to play again
+        while True:
+            play_again = input("Do you want to play again? (y/n): ").strip().lower()
+            if play_again in ['y', 'n']:
+                break # Exit the loop if the input is valid
+            else:
+                print("Invalid input. Please enter 'y' to play again or 'n' to exit.")
+
+        if play_again == 'n':
+            print("Thanks for playing! Goodbye")
+            break # Exit the main loop and end the program
 
 if __name__ == "__main__":
     main()
