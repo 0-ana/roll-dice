@@ -19,7 +19,7 @@ def player_turn(player):
         if roll == 1:
             print(f"Player {player} rolled a 1! No points added.")
             return 0  # Turn ends with 0 points
-        turn_total += roll
+        turn_total += roll # Add the roll value to the turn total
         print(f"Player {player}'s turn total is {turn_total}")
 
         # Loop to ensure valid input ('y' or 'n')
@@ -61,19 +61,20 @@ def main():
     # Loop to allow replaying the game
     while True:
         display_rules()  # Display the rules before starting the game
-        winning_score = 50
+        winning_score = 50 # Set a goal
         player_scores = {1: 0, 2: 0}  # Dictionary to track scores for both players
         current_player = 1  # Player 1 starts first
 
+        # Loop until one of the players reaches the winning score
         while player_scores[1] < winning_score and player_scores[2] < winning_score:
-            print(f"\nPlayer {current_player}'s turn:")
-            turn_total = player_turn(current_player)
-            player_scores[current_player] += turn_total
-            print(f"Player {current_player}'s total score is now {player_scores[current_player]}")
+            print(f"\nPlayer {current_player}'s turn:") # Indicate the current player's turn
+            turn_total = player_turn(current_player) # Execute the player's turn
+            player_scores[current_player] += turn_total # Update the player's total score
+            print(f"Player {current_player}'s total score is now {player_scores[current_player]}") # Display the updated score
             
             # Check if the current player has reached the winning score
             if player_scores[current_player] >= winning_score:
-                print(f"\nPlayer {current_player} wins with a score of {player_scores[current_player]}!")
+                print(f"\nPlayer {current_player} wins with a score of {player_scores[current_player]}!") # Display the winner and winner's score
                 break
             
             # Switch to the other player
