@@ -21,8 +21,16 @@ def player_turn(player):
             return 0  # Turn ends with 0 points
         turn_total += roll
         print(f"Player {player}'s turn total is {turn_total}")
-        hold = input("Do you want to hold? (y/n): ")
-        if hold.lower() == 'y':
+
+        # Loop to ensure valid input ('y' or 'n')
+        while True:
+            hold = input("Do you want to hold? (y/n): ").strip().lower()
+            if hold in ['y', 'n']:
+                break # Exit the loop if the input is valid
+            else:
+                print("Invalid input. Please enter 'y' to hold or 'n' to continue rolling.")
+
+        if hold == 'y':
             break  # Player chooses to hold and end their turn
     return turn_total
 
