@@ -1,5 +1,6 @@
 import random
 from colorama import Fore
+import pyfiglet 
 
 def roll_dice():
     """
@@ -39,9 +40,8 @@ def display_rules():
     """
     Displays the rules of the Pig dice game.
     """
+    welcome = pyfiglet.figlet_format("Welcome  to  Roll  Dice  Game !") 
     rules = """
-    Welcome to the Roll dice game!
-
     Rules:
     1. Players take turns to roll a single die as many times as they wish.
     2. Each roll adds the result to the player's turn total.
@@ -51,8 +51,9 @@ def display_rules():
 
     Press Enter to start the game.
     """
+    print(welcome)
     print(rules)
-    input()  # Wait for the player to press Enter
+    input("Press Enter to start the game...")  # Wait for the player to press Enter
 
 def main():
     """
@@ -94,8 +95,8 @@ def main():
                 print("\nInvalid input. Please enter 'y' to play again or 'n' to exit.")
 
         if play_again == 'n':
-            print(Fore.RESET_ALL)
-            print("\nThanks for playing! Goodbye")
+            goodbye = pyfiglet.figlet_format("Thanks  for  playing ! Goodbye !") 
+            print(goodbye)
             break # Exit the main loop and end the program
 
 if __name__ == "__main__":
