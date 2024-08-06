@@ -1,4 +1,5 @@
 import random
+from colorama import Fore
 
 def roll_dice():
     """
@@ -17,10 +18,10 @@ def player_turn(player):
         roll = roll_dice()
         print(f"Player {player} rolled a {roll}")
         if roll == 1:
-            print(f"Player {player} rolled a 1! No points added.")
+            print(f"\nPlayer {player} rolled a 1! No points added.")
             return 0  # Turn ends with 0 points
         turn_total += roll # Add the roll value to the turn total
-        print(f"Player {player}'s turn total is {turn_total}")
+        print(f"\nPlayer {player}'s turn total is {turn_total}")
 
         # Loop to ensure valid input ('y' or 'n')
         while True:
@@ -28,7 +29,7 @@ def player_turn(player):
             if hold in ['y', 'n']:
                 break # Exit the loop if the input is valid
             else:
-                print("Invalid input. Please enter 'y' to hold or 'n' to continue rolling.")
+                print("\nInvalid input. Please enter 'y' to hold or 'n' to continue rolling.")
 
         if hold == 'y':
             break  # Player chooses to hold and end their turn
@@ -67,10 +68,14 @@ def main():
 
         # Loop until one of the players reaches the winning score
         while player_scores[1] < winning_score and player_scores[2] < winning_score:
-            print(f"\nPlayer {current_player}'s turn:") # Indicate the current player's turn
+            if current_player == 1:
+                print(Fore.RED + f"\nPlayer {current_player}'s turn:")  # Player 1's turn in red
+            else:
+                print(Fore.BLUE + f"\nPlayer {current_player}'s turn:")  # Player 2's turn in blue
+
             turn_total = player_turn(current_player) # Execute the player's turn
             player_scores[current_player] += turn_total # Update the player's total score
-            print(f"Player {current_player}'s total score is now {player_scores[current_player]}") # Display the updated score
+            print(f"\nPlayer {current_player}'s total score is now {player_scores[current_player]}") # Display the updated score
             
             # Check if the current player has reached the winning score
             if player_scores[current_player] >= winning_score:
@@ -86,10 +91,11 @@ def main():
             if play_again in ['y', 'n']:
                 break # Exit the loop if the input is valid
             else:
-                print("Invalid input. Please enter 'y' to play again or 'n' to exit.")
+                print("\nInvalid input. Please enter 'y' to play again or 'n' to exit.")
 
         if play_again == 'n':
-            print("Thanks for playing! Goodbye")
+            print(Fore.RESET_ALL)
+            print("\nThanks for playing! Goodbye")
             break # Exit the main loop and end the program
 
 if __name__ == "__main__":
