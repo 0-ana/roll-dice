@@ -19,3 +19,9 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 - Players take turns rolling the die. After each roll, they can choose to roll again or hold their score
 - The game continues until one player reaches or exceeds 100 points
 - After the game ends, players can choose to play again or exit
+
+## Features
+
+- Welcome message and rules display
+
+![Welcome message and display rules](docs/project-images/roll-dice-welcome-and-rules.png)
