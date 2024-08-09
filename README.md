@@ -25,3 +25,7 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 - Welcome message and rules display
 
 ![Welcome message and display rules](docs/project-images/roll-dice-welcome-and-rules.png)
+
+- Playing the game
+
+![Play the game](docs/project-images/roll-dice-game.png)
