@@ -29,3 +29,8 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 - Playing the game
 
 ![Play the game](docs/project-images/roll-dice-game.png)
+
+- Game over
+  - User have a option to play a game again or quit the game
+
+![Game over](docs/project-images/roll-dice-game-over.png)
