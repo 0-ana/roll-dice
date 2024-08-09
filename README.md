@@ -104,5 +104,13 @@ All inputs works as they should:
     - scroll to the bottom of the deploy page and click Deploy Branch to deploy manually
     - click View to view the deployed site
 
-## Deployment bug
+## Deployment Bug
 - during deployment no bugs were found
+
+## Credits
+- Roll Dice Game was made using next resources:
+    - https://www.w3schools.com/
+    - https://overapi.com/python
+    - https://www.youtube.com/watch?v=NpmFbWO6HPU&t=6384s
+    - https://www.reddit.com/r/learnpython/comments/dbs67z/pig_dice_game_python/?rdt=35926
+    - https://www.codewizardshq.com/python-tutorial-for-kids-pig-dice-game/
