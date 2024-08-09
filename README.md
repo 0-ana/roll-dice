@@ -69,7 +69,7 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 ![Python validation](docs/validation-images/python-validator-roll-dice.png)
 
 ## Functional Testing
-All features works as they should:
+All inputs works as they should:
 
 - Enter on welcome page:
 
@@ -82,3 +82,24 @@ All features works as they should:
 - play again when game is over:
 
 ![Play again](docs/validation-images/roll-dice-play-again.png)
+
+## Deployment
+
+- The site was deployed via Heroku, and the live link can be found [here](https://roll-dice09-55f0f87de3ed.herokuapp.com/) 
+- Before deploying to Heroku pip3 freeze > requirements.txt was used to add all the dependencies required to the requirements.txt file. This is required for the game to run on Heroku.
+- The following steps were then taken:
+    - log in to [Heroku](https://id.heroku.com/login)
+    - on the main page from the drop-down menu select "Create New App"
+    - enter a unique app name
+    - select your region
+    - click on the Create App button
+    - click on the Settings Tab and scroll down to Config Vars
+    - click Reveal Config Vars and enter PORT into the Key box and 8000 into the Value box and click the Add button
+    - scroll down to the Buildpack section, clock Add Buildpack select Python and click Save Changes
+    - scroll down to the Buildpack section, clock Add Buildpack select node.js and click Save Changes
+    - scroll to the top of the page and choose the Deploy tab
+    - select Github as the deployment method
+    - confirm you want to connect to GitHub
+    - search for the repository name and click the connect button
+    - scroll to the bottom of the deploy page and click Deploy Branch to deploy manually
+    - click View to view the deployed site
