@@ -50,3 +50,10 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
   - pyfiglet is used to convert welcome and goodbye message text into ASCII art fonts
 - Lucidchart
   - Lucidchart is used to make flowchart
+
+## Lucidchart
+
+- Lucidchart is used as basic idea about steps needed to make the Roll Dice Game
+
+![Lucidchart](docs/project-images/roll-dice-lucidchart.png)
+
