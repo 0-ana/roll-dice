@@ -67,3 +67,18 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
   - https://www.online-ide.com/online_python_syntax_checker
 
 ![Python validation](docs/validation-images/python-validator-roll-dice.png)
+
+## Functional Testing
+All features works as they should:
+
+- Enter on welcome page:
+
+![Enter](docs/validation-images/roll-dice-enter.png)
+  
+- y/n for hold:
+
+![Hold](docs/validation-images/roll-dice-hold.png)
+
+- play again when game is over:
+
+![Play again](docs/validation-images/roll-dice-play-again.png)
