@@ -103,3 +103,6 @@ All inputs works as they should:
     - search for the repository name and click the connect button
     - scroll to the bottom of the deploy page and click Deploy Branch to deploy manually
     - click View to view the deployed site
+
+## Deployment bug
+- during deployment no bugs were found
