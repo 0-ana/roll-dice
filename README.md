@@ -57,3 +57,13 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 
 ![Lucidchart](docs/project-images/roll-dice-lucidchart.png)
 
+## Testing
+
+- Game is tested using:
+  - https://pep8ci.herokuapp.com/
+
+![Python linter](docs/validation-images/python-linter-roll-dice.png)
+
+  - https://www.online-ide.com/online_python_syntax_checker
+
+![Python validation](docs/validation-images/python-validator-roll-dice.png)
