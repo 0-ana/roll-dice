@@ -34,3 +34,19 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
   - User have a option to play a game again or quit the game
 
 ![Game over](docs/project-images/roll-dice-game-over.png)
+
+## Technologies
+
+- Gitpod
+  - The website was developed using Gitpod
+  - Gitpod was used to commit and push code to GitHub
+- GitHub
+  - Source code is hosted on GitHub
+- Heroku
+  - Webpage is deployed using from Heroku
+- colorama
+  - colorama is used to make player 1 turn red and player 2 turn blue
+- pyfiglet
+  - pyfiglet is used to convert welcome and goodbye message text into ASCII art fonts
+- Lucidchart
+  - Lucidchart is used to make flowchart
