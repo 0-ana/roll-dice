@@ -1,5 +1,5 @@
 import random
-from colorama import Fore
+from colorama import Fore, Style
 import pyfiglet
 
 
@@ -46,6 +46,8 @@ def display_rules():
     """
     Displays the rules of the Pig dice game.
     """
+    # Reset color
+    print(Style.RESET_ALL)
     # Display a welcome message
     welcome = pyfiglet.figlet_format("Welcome  to  Roll  Dice  Game !")
     rules = """
@@ -55,7 +57,7 @@ def display_rules():
     3. If a player rolls a 1, their turn total becomes 0, and their turn ends.
     4. A player can choose to 'hold' their turn total, adding it to their
        overall score, and pass the turn to the next player.
-    5. The first player to reach or exceed 100 points wins the game.
+    5. The first player to reach or exceed 50 points wins the game.
 
     Press Enter to start the game.
     """
@@ -105,6 +107,8 @@ def main():
 
         # Ask if players want to play again
         while True:
+            # Reset color
+            print(Style.RESET_ALL)
             play_again = input("Do you want to play again? (y/n): "
                                ).strip().lower()
             if play_again in ['y', 'n']:
