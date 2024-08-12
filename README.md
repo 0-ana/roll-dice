@@ -10,14 +10,14 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 - Each roll adds the result to the player's turn total
 - If a player rolls a 1, their turn total becomes 0, and their turn ends
 - A player can choose to 'hold' their turn total, adding it to their overall score, and pass the turn to the next player
-- The first player to reach or exceed 100 points wins the game
+- The first player to reach or exceed 50 points wins the game
 
 ## How to Play
 
 - Run the script to start the game
 - The game will display the rules. Press Enter to start
 - Players take turns rolling the die. After each roll, they can choose to roll again or hold their score
-- The game continues until one player reaches or exceeds 100 points
+- The game continues until one player reaches or exceeds 50 points
 - After the game ends, players can choose to play again or exit
 
 ## Features
@@ -33,7 +33,7 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 - Game over
   - User have a option to play a game again or quit the game
 
-![Game over](docs/project-images/roll-dice-game-over.png)
+![Game over](docs/project-images/roll-dice-goodbye.png)
 
 ## Technologies
 
@@ -62,26 +62,66 @@ Welcome to the Roll Dice Game! This is a simple implementation of the classic di
 - Game is tested using:
   - https://pep8ci.herokuapp.com/
 
-![Python linter](docs/validation-images/python-linter-roll-dice.png)
+![Python linter](docs/validation-images/roll-dice-pep8ci.png)
 
   - https://www.online-ide.com/online_python_syntax_checker
 
 ![Python validation](docs/validation-images/python-validator-roll-dice.png)
 
 ## Functional Testing
-All inputs works as they should:
+All features works as they should:
 
 - Enter on welcome page:
+  - when user press Enter, Game starts
 
 ![Enter](docs/validation-images/roll-dice-enter.png)
+
+- mathematics
+  - mathematics are working as it should
+
+![Math](docs/validation-images/roll-dice-dice.png)
+
+![Math](docs/validation-images/roll-dice-turn-total.png)
+
+![Math](docs/validation-images/roll-dice-update-score.png)
   
 - y/n for hold:
+  - yes: player choose to 'hold' their turn total, adding it to their overall score, and pass the turn to the next player
+  - no: player chose to continue rolling dice, adding each number to their turn total
 
 ![Hold](docs/validation-images/roll-dice-hold.png)
 
+![Hold](docs/validation-images/roll-dice-hold-or-not.png)
+
+- if user enters anything but y/n:
+  - if user enters anything but y/n, message will be printed to warn them
+
+![Warn](docs/validation-images/roll-dice-y-n-validation.png)
+
+![Warn](docs/validation-images/roll-dice-y-n-validation2.png)
+
+- if player roll 1:
+  - if a player rolls a 1, their turn total becomes 0, and their turn ends
+
+![If 1](docs/validation-images/roll-dice-if-1.png)
+
 - play again when game is over:
+  - yes: Game starts again
+  - no: Game over! Goodbye message will be displayed
 
 ![Play again](docs/validation-images/roll-dice-play-again.png)
+
+- color set/reset, pyfiglet:
+  - welcome message is written in pyfiglet
+  - player 1 turn is red colored
+  - player 2 turn is blue colored
+  - game over is reset to white again and written in pyfiglet
+
+![Welcome](docs/project-images/roll-dice-welcome.png)
+
+![Color set](docs/project-images/roll-dice-game.png)
+
+![Color reset](docs/project-images/roll-dice-goodbye.png)
 
 ## Deployment
 
